@@ -1,0 +1,9 @@
+<h1>Sign in here</h1>
+<h2><div style="text-align: center;"><%= flash[:error] if flash[:error]%></div></h2>
+<%= form_tag '/signin' do %>
+  <label for="Username">Name</label>
+  <%= text_field_tag :'user[name]' %>
+  <label for="Password">Password</label>
+  <%= password_field_tag  :'user[password]' %>
+  <%= submit_tag "Sign In" %>
+<% end %>
